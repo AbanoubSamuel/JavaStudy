@@ -1,4 +1,4 @@
-# Design Patterns
+# Java Study
 
 [![Pipeline](https://github.com/digitalservicebund/java-application-template/actions/workflows/pipeline.yml/badge.svg)](https://github.com/digitalservicebund/java-application-template/actions/workflows/pipeline.yml)
 [![Scan](https://github.com/digitalservicebund/java-application-template/actions/workflows/scan.yml/badge.svg)](https://github.com/digitalservicebund/java-application-template/actions/workflows/scan.yml)
@@ -9,7 +9,7 @@ the [Spring WebFlux reactive stack](https://docs.spring.io/spring-framework/docs
 
 ## Prerequisites
 
-Java 17, Docker for building + running the containerized application:
+Java 21, Docker for building + running the containerized application:
 
 ```bash
 brew install openjdk@17
