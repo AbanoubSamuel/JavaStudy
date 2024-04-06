@@ -90,16 +90,14 @@ public class Main {
                 .toList();
 
 
-        AbstractCollection<Object> abstractCollection = new AbstractCollection<Object>() {
+        AbstractCollection<Object> abstractCollection = new AbstractCollection<>() {
             @Override
-            public Iterator iterator()
-            {
+            public Iterator iterator() {
                 return null;
             }
 
             @Override
-            public int size()
-            {
+            public int size() {
                 return 0;
             }
         };
