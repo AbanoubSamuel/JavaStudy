@@ -1,6 +1,5 @@
 package org.study;
 
-
 import org.study.study.CustomAnnotation;
 import org.study.study.MyClass;
 
@@ -13,8 +12,7 @@ import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 public class Main {
-    public static int countOccurrences(String str, String word)
-    {
+    public static int countOccurrences(String str, String word) {
         // split the string by spaces in a
         String[] array = str.split("\\p{P}");
 
@@ -36,8 +34,7 @@ public class Main {
 //        String word = "words";
 //        System.out.println("Word count using String methods: " + countOccurrences(str, word));
 //    }
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
         Class<MyClass> myClass = MyClass.class;
 
         // Class level annotation
@@ -72,7 +69,8 @@ public class Main {
 
         int[] numbers = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11};
 
-        IntStream.of(numbers).forEach(number -> System.out.println("value: " + number));
+        IntStream.of(numbers)
+                .forEach(number -> System.out.println("value: " + number));
 
 //        for (int num : numbers) {
 //            System.out.println(num);
@@ -88,7 +86,6 @@ public class Main {
                 .map(String::toUpperCase)
                 .peek(e -> System.out.println("Mapped value: " + e))
                 .toList();
-
 
         AbstractCollection<Object> abstractCollection = new AbstractCollection<>() {
             @Override
