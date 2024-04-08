@@ -1,4 +1,4 @@
-package org.study.study;
+package org.study.core;
 
 interface Sayable{
     void say();

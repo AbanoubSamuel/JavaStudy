@@ -1,13 +1,12 @@
 package org.study;
 
-import org.study.study.CustomAnnotation;
-import org.study.study.MyClass;
+import org.study.core.CustomAnnotation;
+import org.study.core.MyClass;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.util.*;
-import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
@@ -23,17 +22,9 @@ public class Main {
             if (word.equals(string))
                 count++;
         }
-
         return count;
     }
 
-    // Driver code
-//    public static void main(String[] args)
-//    {
-//        String str = "This is a sample sentence. It has some words, and words may repeat.";
-//        String word = "words";
-//        System.out.println("Word count using String methods: " + countOccurrences(str, word));
-//    }
     public static void main(String[] args) {
         Class<MyClass> myClass = MyClass.class;
 
