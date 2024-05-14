@@ -85,25 +85,12 @@ public class Main {
                 return 0;
             }
         };
-
-        int n = 10;
-        int i;
-
-        // initial array of size 10
-        int[] arr = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-
-        // print the original array
-        System.out.println("Initial Array:\n" + Arrays.toString(arr));
-
-        // element to be added
-        int x = 50;
-
-        // call the method to add x in arr
-        arr = Array.insert(n, arr, x);
-
-        // print the updated array
-        System.out.println("\nArray with " + x
-                + " added:\n"
-                + Arrays.toString(arr));
+        System.out.println("-----------DSA-----------");
+        Array items = new Array(3);
+        items.insert(10);
+        items.insert(20);
+        items.insert(30);
+        items.insert(40);
+        items.print();
     }
 }
