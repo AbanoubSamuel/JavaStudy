@@ -19,8 +19,7 @@ public class Main {
         int count = 0;
         for (String string : array) {
             // if match found increase count
-            if (word.equals(string))
-                count++;
+            if (word.equals(string)) count++;
         }
         return count;
     }
@@ -60,8 +59,7 @@ public class Main {
 
         int[] numbers = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11};
 
-        IntStream.of(numbers)
-                .forEach(number -> System.out.println("value: " + number));
+        IntStream.of(numbers).forEach(number -> System.out.println("value: " + number));
 
 //        for (int num : numbers) {
 //            System.out.println(num);
@@ -71,12 +69,9 @@ public class Main {
 //        nameStream.forEach(System.out::println);
 
         Stream<String> nameStream = Stream.of("Alice", "Bob", "Chuck");
-        List<String> result = nameStream
-                .filter(e -> e.length() > 3)
-                .peek(e -> System.out.println("Filtered value: " + e))
-                .map(String::toUpperCase)
-                .peek(e -> System.out.println("Mapped value: " + e))
-                .toList();
+        List<String> result = nameStream.filter(e -> e.length() > 3)
+                .peek(e -> System.out.println("Filtered value: " + e)).map(String::toUpperCase)
+                .peek(e -> System.out.println("Mapped value: " + e)).toList();
 
         AbstractCollection<Object> abstractCollection = new AbstractCollection<>() {
             @Override
