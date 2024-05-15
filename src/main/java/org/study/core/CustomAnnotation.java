@@ -1,4 +1,4 @@
-package org.study.study;
+package org.study.core;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
