@@ -12,6 +12,7 @@ public class Array {
      * @param item add item to array
      */
     public void insert(int item) {
+
         // If the array is full
         if (items.length == count) {
             int[] newItems = new int[items.length * 2];
@@ -22,6 +23,17 @@ public class Array {
         }
         // Add the new item at the end
         items[count++] = item;
+    }
+
+    public void removeAt(int index) {
+        // Validate the index
+        if (index < 0 || index >= count) {
+            throw new IllegalArgumentException("Index: " + index + ", Count: " + count);
+        }
+        for (int i = index; i < count; i++) {
+            items[i] = items[i + 1];
+        }
+        count--;
     }
 
     /**

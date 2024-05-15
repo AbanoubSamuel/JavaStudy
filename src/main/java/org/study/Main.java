@@ -91,6 +91,7 @@ public class Main {
         items.insert(20);
         items.insert(30);
         items.insert(40);
+        items.removeAt(1);
         items.print();
     }
 }
