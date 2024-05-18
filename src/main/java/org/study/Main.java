@@ -91,7 +91,8 @@ public class Main {
         items.insert(20);
         items.insert(30);
         items.insert(40);
-        items.removeAt(1);
+        items.indexOf(50);
+        System.out.println(items.indexOf(50));
         items.print();
     }
 }
