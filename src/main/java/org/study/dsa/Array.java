@@ -25,12 +25,22 @@ public class Array {
         items[count++] = item;
     }
 
+    public int indexOf(int item) {
+        for (int i = 0; i < count; i++) {
+            if (items[i] == item) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
     public void removeAt(int index) {
         // Validate the index
         if (index < 0 || index >= count) {
-            throw new IllegalArgumentException("Index: " + index + ", Count: " + count);
+            System.out.println("Invalid index");
+            return;
         }
-        for (int i = index; i < count; i++) {
+        for (int i = index; i < count - 1; i++) {
             items[i] = items[i + 1];
         }
         count--;
