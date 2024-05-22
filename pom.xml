@@ -18,6 +18,7 @@
             <plugin>
                 <!-- Build an executable JAR -->
                 <groupId>org.apache.maven.plugins</groupId>
+                <version>3.4.1</version>
                 <artifactId>maven-jar-plugin</artifactId>
                 <configuration>
                     <archive>
