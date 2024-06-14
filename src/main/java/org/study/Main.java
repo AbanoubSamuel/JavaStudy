@@ -1,8 +1,8 @@
 package org.study;
 
-import org.study.core.CustomAnnotation;
-import org.study.core.MyClass;
+import org.study.core.*;
 import org.study.dsa.Array;
+import org.study.oop.Human;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
@@ -11,20 +11,9 @@ import java.util.*;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
+import static org.study.ps.Currency.countCurrency;
+
 public class Main {
-    public static int countOccurrences(String str, String word) {
-        // split the string by spaces in a
-        String[] array = str.split("\\p{P}");
-
-        // search for pattern in a
-        int count = 0;
-        for (String string : array) {
-            // if match found increase count
-            if (word.equals(string)) count++;
-        }
-        return count;
-    }
-
     public static void main(String[] args) {
         Class<MyClass> myClass = MyClass.class;
 
@@ -94,5 +83,25 @@ public class Main {
         items.indexOf(50);
         System.out.println(items.indexOf(50));
         items.print();
+        Human human = new Human();
+        System.out.println(human);
+        human.setName("Abanoub");
+
+        int[] plants = new int[5];
+        plants[0] = 1;
+        plants[1] = 2;
+        // Access and modify elements directly
+        int value = plants[1];
+        String[] stringArray = new String[5];  // Array of String objects
+        ArrayList<String> arrayList = new ArrayList<>();
+        System.out.println("========== Currency ==========");
+        int amount = 868;
+        countCurrency(amount);
+
+        System.out.println("========== Double Column ==========");
+        // Referring static method
+        Sayable sayable = MethodReference::saySomething;
+        // Calling interface method
+        sayable.say();
     }
 }
