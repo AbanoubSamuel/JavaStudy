@@ -29,4 +29,8 @@ public class Employee {
         }
         this.hourlyRate = hourlyRate;
     }
+
+    public int calc(int number, int number2) {
+        return number * number2;
+    }
 }

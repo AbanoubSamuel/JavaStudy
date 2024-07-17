@@ -1,20 +1,18 @@
 package org.study.core;
 
-
-@CustomAnnotation("Class Level Annotation")
+@MyAnnotation("Class Level Annotation")
 public class MyClass {
-
-    @CustomAnnotation("Method Level Annotation")
+    @MyAnnotation("Method Level Annotation")
     public void myMethod() {
         // Method implementation
     }
 
-    @CustomAnnotation("Constructor Level Annotation")
+    @MyAnnotation("Constructor Level Annotation")
     public MyClass() {
         // Constructor implementation
     }
 
-    @CustomAnnotation("Member Level Annotation")
+    @MyAnnotation("Member Level Annotation")
     private String myField;
 
     // Other members and methods
