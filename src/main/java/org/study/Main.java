@@ -1,8 +1,6 @@
 package org.study;
 
-import org.study.core.*;
-import org.study.oop.Employee;
-import org.study.oop.TextBox;
+import org.study.oop.inheritance.*;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
@@ -118,7 +116,8 @@ public class Main {
             Class<?> personClass = Class.forName("org.study.core.Person");
 
             // Create an instance of Person using the default constructor
-            Object personInstance = personClass.getDeclaredConstructor().newInstance();
+            Object personInstance = personClass.getDeclaredConstructor()
+                    .newInstance();
 
             // Access the 'name' field and set its value
             Field nameField = personClass.getDeclaredField("name");
@@ -156,5 +155,11 @@ public class Main {
 //        System.out.println(employee1.calculateSalary(10));
 //        int result = (19 / 3);
 //        System.out.println(result);
+//        UIControl uiControl = new UIControl();
+//        uiControl.isEnabled();
+        UIControl[] controls = new UIControl[]{new TextBox(), new CheckBox()};
+        for (UIControl control : controls) {
+            control.render();
+        }
     }
 }
