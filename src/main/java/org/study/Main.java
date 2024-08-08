@@ -1,6 +1,7 @@
 package org.study;
 
-import org.study.oop.inheritance.*;
+import org.study.generics.GenericList;
+import org.study.generics.User;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
@@ -157,9 +158,22 @@ public class Main {
 //        System.out.println(result);
 //        UIControl uiControl = new UIControl();
 //        uiControl.isEnabled();
-        UIControl[] controls = new UIControl[]{new TextBox(), new CheckBox()};
-        for (UIControl control : controls) {
-            control.render();
-        }
+//        UIControl[] controls = new UIControl[]{new TextBox(), new CheckBox()};
+//        for (UIControl control : controls) {
+//            control.render();
+//        }
+
+//        TaxCalculator taxCalculator = new TaxCalculator2020();
+//        taxCalculator.calculateTax();
+//        TaxReport taxReport = new TaxReport(taxCalculator);
+//        taxReport.show();
+//        TaxCalculator taxCalculator1 = new TaxCalculator2024();
+//        TaxReport taxReport1 = new TaxReport(taxCalculator1);
+//        taxReport1.show();
+        GenericList<Object> list = new GenericList<>();
+        list.add(1);
+        list.add(new User());
+        list.get(1);
+        System.out.println(list);
     }
 }
