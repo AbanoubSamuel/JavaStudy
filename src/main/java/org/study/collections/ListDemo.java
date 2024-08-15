@@ -10,6 +10,7 @@ public class ListDemo {
         list.add("3");
         list.addFirst("!");
         Collections.addAll(list, "a", "b", "c");
-        System.out.println(list.getFirst());
+        list.set(0, "A+");
+        System.out.println(list);
     }
 }
