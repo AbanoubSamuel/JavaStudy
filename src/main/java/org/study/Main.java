@@ -1,11 +1,11 @@
 package org.study;
 
-import org.study.collections.CollectionDemo;
-import org.study.collections.ListDemo;
+import org.study.collections.*;
 import org.study.generics.*;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -210,5 +210,14 @@ public class Main {
         System.out.println("========== List Demo =========");
         System.out.println("========== List Demo =========");
         ListDemo.show();
+        System.out.println("========== Comparable Interface =========");
+        System.out.println("========== Comparable Interface =========");
+        List<Customer> customers = new ArrayList<>();
+        customers.add(new Customer("B", "e3"));
+        customers.add(new Customer("A", "e2"));
+        customers.add(new Customer("C", "e1"));
+        System.out.println(customers);
+        Collections.sort(customers, new EmailComparator());
+        System.out.println(customers);
     }
 }

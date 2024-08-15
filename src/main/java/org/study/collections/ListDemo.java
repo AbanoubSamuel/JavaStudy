@@ -12,5 +12,7 @@ public class ListDemo {
         Collections.addAll(list, "a", "b", "c");
         list.set(0, "A+");
         System.out.println(list);
+        System.out.println(list.lastIndexOf("A+"));
+        System.out.println(list.subList(0, 2));
     }
 }
