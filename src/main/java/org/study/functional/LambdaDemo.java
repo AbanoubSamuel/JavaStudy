@@ -31,7 +31,7 @@ public class LambdaDemo {
         // ToDo: This is a heavy calculation done with the Supplier.
         Supplier<Long> heavyCalculationSupplier = () -> {
             System.out.println("Performing heavy calculation...");
-            return LongStream.rangeClosed(1, 10_000_00000)
+            return LongStream.rangeClosed(1, 10_000_000_00)
                              .parallel()
                              .map(n -> n * n)
                              .map(n -> n + n)

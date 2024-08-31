@@ -1,6 +1,7 @@
 package org.study;
 
 import org.study.collections.*;
+import org.study.concurrency.ConcurrencyDemo;
 import org.study.core.*;
 import org.study.functional.LambdaDemo;
 import org.study.generics.*;
@@ -8,6 +9,7 @@ import org.study.oop.Employee;
 import org.study.oop.Human;
 import org.study.oop.dependancyInjection.*;
 import org.study.oop.inheritance.*;
+import org.study.streams.StreamDemo;
 
 import java.lang.reflect.*;
 import java.text.NumberFormat;
@@ -258,8 +260,13 @@ public class Main {
         /////////////// Map Interface ////////////////
 //        MapDemo.show();
         //////////////// Lambda Expression & Function Interfaces //////////////
-        LambdaDemo.show();
+//        LambdaDemo.show();
 //        final List<Integer> integers = List.of(1, 2, 3);
 //        integers.forEach(System.out::println);
+
+        ////////////// Stream Demo /////////////
+//        StreamDemo.show();
+        ConcurrencyDemo.show();
+        SubSealed.show();
     }
 }
