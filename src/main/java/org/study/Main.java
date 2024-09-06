@@ -267,8 +267,8 @@ public class Main {
 //        integers.forEach(System.out::println);
 
         ////////////// Stream Demo /////////////
-        StreamDemo.show();
+//        StreamDemo.show();
 //        SubSealed.show();
-        
+        ConcurrencyDemo.show();
     }
 }
