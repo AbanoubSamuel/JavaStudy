@@ -11,6 +11,8 @@ import org.study.oop.dependancyInjection.*;
 import org.study.oop.inheritance.*;
 import org.study.streams.StreamDemo;
 
+import java.io.FileOutputStream;
+import java.io.StringReader;
 import java.lang.reflect.*;
 import java.text.NumberFormat;
 import java.util.*;
@@ -265,8 +267,8 @@ public class Main {
 //        integers.forEach(System.out::println);
 
         ////////////// Stream Demo /////////////
-//        StreamDemo.show();
-        ConcurrencyDemo.show();
-        SubSealed.show();
+        StreamDemo.show();
+//        SubSealed.show();
+        
     }
 }
