@@ -9,8 +9,7 @@ public class DownloadFileTask implements Runnable {
 
     @Override
     public void run() {
-        System.out.println("Downloading a file: " + Thread.currentThread()
-                                                          .getName());
+        System.out.println("Downloading a file: " + Thread.currentThread().getName());
         for (int i = 1; i <= 10_0000; i++) {
             if (Thread.currentThread()
                       .isInterrupted()) {
@@ -18,8 +17,7 @@ public class DownloadFileTask implements Runnable {
             }
             status.increaseTotalBytes();
         }
-        System.out.println("Thread completed: " + Thread.currentThread()
-                                                        .getName());
+        System.out.println("Thread completed: " + Thread.currentThread().getName());
     }
 
     public DownloadStatus getStatus() {
