@@ -1,23 +1,7 @@
 package org.study;
 
-import org.study.collections.*;
 import org.study.concurrency.ConcurrencyDemo;
 import org.study.core.*;
-import org.study.functional.LambdaDemo;
-import org.study.generics.*;
-import org.study.oop.Employee;
-import org.study.oop.Human;
-import org.study.oop.dependancyInjection.*;
-import org.study.oop.inheritance.*;
-import org.study.streams.StreamDemo;
-
-import java.io.FileOutputStream;
-import java.io.StringReader;
-import java.lang.reflect.*;
-import java.text.NumberFormat;
-import java.util.*;
-import java.util.stream.IntStream;
-import java.util.stream.Stream;
 
 public class Main {
     public static void main(String[] args) {
@@ -269,6 +253,6 @@ public class Main {
         ////////////// Stream Demo /////////////
 //        StreamDemo.show();
 //        SubSealed.show();
-        ConcurrencyDemo.show();
+        ConcurrencyDemo.syncedCollections();
     }
 }
