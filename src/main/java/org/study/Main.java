@@ -1,6 +1,7 @@
 package org.study;
 
 import org.study.concurrency.ConcurrencyDemo;
+import org.study.concurrency.executers.ExecutorDemo;
 import org.study.core.*;
 
 public class Main {
@@ -253,6 +254,7 @@ public class Main {
         ////////////// Stream Demo /////////////
 //        StreamDemo.show();
 //        SubSealed.show();
-        ConcurrencyDemo.syncedCollections();
+//        ConcurrencyDemo.syncedCollections();
+        ExecutorDemo.show();
     }
 }
