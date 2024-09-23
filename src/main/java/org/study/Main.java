@@ -1,6 +1,7 @@
 package org.study;
 
 import org.study.concurrency.ConcurrencyDemo;
+import org.study.concurrency.executers.CompletableFutureDemo;
 import org.study.concurrency.executers.ExecutorDemo;
 import org.study.core.*;
 
@@ -255,6 +256,7 @@ public class Main {
 //        StreamDemo.show();
 //        SubSealed.show();
 //        ConcurrencyDemo.syncedCollections();
-        ExecutorDemo.show();
+//        ExecutorDemo.show();
+        CompletableFutureDemo.show();
     }
 }
