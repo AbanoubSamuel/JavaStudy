@@ -1,12 +1,12 @@
 package org.study;
 
-import org.study.concurrency.ConcurrencyDemo;
-import org.study.concurrency.executers.CompletableFutureDemo;
-import org.study.concurrency.executers.ExecutorDemo;
+import org.study.concurrency.executers.*;
 import org.study.core.*;
 
+import java.util.concurrent.ExecutionException;
+
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException, ExecutionException {
         /////////// CustomAnnotation /////////////
         Class<MyClass> myClass = MyClass.class;
 
@@ -257,6 +257,11 @@ public class Main {
 //        SubSealed.show();
 //        ConcurrencyDemo.syncedCollections();
 //        ExecutorDemo.show();
-        CompletableFutureDemo.show();
+        CompletableFutureDemo.showAsync();
+//        MailService service = new MailService();
+//        service.sendAsync();
+//        System.out.println("Hello World!");
+//
+//        Thread.sleep(5000);
     }
 }
