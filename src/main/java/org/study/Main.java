@@ -257,7 +257,7 @@ public class Main {
 //        SubSealed.show();
 //        ConcurrencyDemo.syncedCollections();
 //        ExecutorDemo.show();
-        CompletableFutureDemo.showAsync();
+          CompletableFutureDemo.handleTimeOuts();
 //        MailService service = new MailService();
 //        service.sendAsync();
 //        System.out.println("Hello World!");
