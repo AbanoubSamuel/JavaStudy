@@ -1,18 +1,19 @@
 package org.study.concurrency.executers;
 
 import java.util.concurrent.*;
+import java.util.function.Supplier;
 
 public class CompletableFutureDemo {
-//    public static void show() {
-//        Supplier<Integer> task = () -> 10;
-//        CompletableFuture<Integer> future = CompletableFuture.supplyAsync(task);
-//        try {
-//            Integer result = future.get();
-//            System.out.println("Print: " + result);
-//        } catch (InterruptedException | ExecutionException e) {
-//            throw new RuntimeException(e);
-//        }
-//    }
+    public static void show() {
+        Supplier<Integer> task = () -> 10;
+        CompletableFuture<Integer> future = CompletableFuture.supplyAsync(task);
+        try {
+            Integer result = future.get();
+            System.out.println("Print: " + result);
+        } catch (InterruptedException | ExecutionException e) {
+            throw new RuntimeException(e);
+        }
+    }
 
     public static void showAsync() {
         CompletableFuture.supplyAsync(() -> 1)
@@ -64,7 +65,6 @@ public class CompletableFutureDemo {
             return 20;
         });
         CompletableFuture<Integer> second = CompletableFuture.supplyAsync(() -> 20);
-
         CompletableFuture.anyOf(first, second)
                          .thenAccept(System.out::println);
     }
