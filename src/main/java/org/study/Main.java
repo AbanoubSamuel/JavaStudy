@@ -1,7 +1,8 @@
 package org.study;
 
-import org.study.concurrency.executers.*;
-import org.study.core.*;
+import org.study.ultimate.concurrency.executers.*;
+import org.study.ultimate.concurrency.executers.CompletableFutureDemo;
+import org.study.ultimate.core.MyClass;
 
 import java.util.concurrent.ExecutionException;
 
@@ -257,7 +258,7 @@ public class Main {
 //        SubSealed.show();
 //        ConcurrencyDemo.syncedCollections();
 //        ExecutorDemo.show();
-          CompletableFutureDemo.handleTimeOuts();
+        CompletableFutureDemo.quoteService();
 //        MailService service = new MailService();
 //        service.sendAsync();
 //        System.out.println("Hello World!");
