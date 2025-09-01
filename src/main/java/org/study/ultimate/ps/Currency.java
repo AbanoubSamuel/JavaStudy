@@ -1,6 +1,6 @@
 package org.study.ultimate.ps;
 
-public class Currency {
+public sealed class Currency permits CryptoCurrency, DigitalCurrency {
     public static void countCurrency(int number) {
 
         int[] notes = new int[]{2000, 500, 200, 100, 50, 20, 10, 5, 1};

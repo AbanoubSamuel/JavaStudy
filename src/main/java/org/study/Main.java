@@ -1,13 +1,25 @@
 package org.study;
 
+import org.study.dsa.EmplyeeUtil;
 import org.study.ultimate.concurrency.executers.*;
 import org.study.ultimate.concurrency.executers.CompletableFutureDemo;
 import org.study.ultimate.core.MyClass;
 
-import java.util.concurrent.ExecutionException;
+import java.util.*;
+import java.util.concurrent.*;
 
 public class Main {
     public static void main(String[] args) throws InterruptedException, ExecutionException {
+
+        Map<String, String> map = new HashMap<>();
+        EmplyeeUtil.setNewEmployee("Tony", "Tony", map);
+        EmplyeeUtil.setNewEmployee("Abanoub", "Tony", map);
+        EmplyeeUtil.setNewEmployee("Jack", "Tony", map);
+        List<Integer> nums = List.of(1, 2, 3, 4, 5);
+
+        List<Integer> evens = nums.stream()
+                                  .filter(n -> n % 2 == 0)   // only even
+                                  .toList();
         /////////// CustomAnnotation /////////////
         Class<MyClass> myClass = MyClass.class;
 
@@ -258,11 +270,22 @@ public class Main {
 //        SubSealed.show();
 //        ConcurrencyDemo.syncedCollections();
 //        ExecutorDemo.show();
-        CompletableFutureDemo.quoteService();
+//        CompletableFutureDemo.quoteService();
 //        MailService service = new MailService();
 //        service.sendAsync();
 //        System.out.println("Hello World!");
 //
 //        Thread.sleep(5000);
+        Runnable task = () -> System.out.println("Running...");
+        new Thread(task).start();
+        Callable<String> callableTask = () -> "Result";
+
+        ExecutorService service = Executors.newSingleThreadExecutor();
+        Future<String> future = service.submit(callableTask);
+        String result = future.get(); // blocks until done
+        System.out.println(result);
+        service.shutdown();
+        int count = Thread.activeCount();
+        System.out.println("Active Threads: " + count);
     }
 }
