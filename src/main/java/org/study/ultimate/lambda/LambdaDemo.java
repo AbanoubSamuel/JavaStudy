@@ -1,4 +1,4 @@
-package org.study.ultimate.functional;
+package org.study.ultimate.lambda;
 
 import java.util.*;
 import java.util.function.*;

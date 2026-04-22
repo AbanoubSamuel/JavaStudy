@@ -1,4 +1,4 @@
-package org.study.ultimate.factoryMethod;
+package org.study.dp.factoryMethod;
 
 /**
  * Windows Dialog will produce Windows buttons.
