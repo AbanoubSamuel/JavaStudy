@@ -1,4 +1,4 @@
-package org.study.ultimate.streams;
+package org.study.ultimate.core.streams;
 
 public class Movie implements Comparable<Movie> {
     private final String title;

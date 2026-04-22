@@ -1,4 +1,4 @@
-package org.study.ultimate.streams;
+package org.study.ultimate.core.streams;
 
 import java.util.*;
 import java.util.function.Function;
